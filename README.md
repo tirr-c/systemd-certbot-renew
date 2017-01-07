@@ -7,8 +7,8 @@ Nginx will be paused during renew.
 cd systemd/system/
 sudo cp * /etc/systemd/system/
 
-sudo systemctl start certbot.timer
-sudo systemctl enable certbot.timer
+sudo systemctl start certbot-renew.timer
+sudo systemctl enable certbot-renew.timer
 ```
 
 ## License
