@@ -1,0 +1,10 @@
+[Unit]
+Description=Run certbot renew once a month
+
+[Timer]
+# Run certbot monthly
+OnCalendar=monthly
+Persistent=true
+
+[Install]
+WantedBy=timers.target

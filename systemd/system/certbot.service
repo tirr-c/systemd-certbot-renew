@@ -1,0 +1,10 @@
+[Unit]
+Description=Renew certification
+
+[Service]
+Type=oneshot
+
+# TODO: Better way to pause nginx?
+ExecStartPre=/usr/bin/systemctl stop nginx
+ExecStart=/usr/bin/certbot renew --standalone
+ExecStartPost=/usr/bin/systemctl start nginx
